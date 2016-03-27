@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Création de parcours</title>
+  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="CSS/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<style>
+.bg-1{background-color: #9e87ce}
+.bg-2{background-color: #5c4b51}
+.bg-3{background-color: #e0cf75}
+.bg-4{background-color: #f5b65a}
+.bg-5{background-color: #f25f5c}
+.bg-6{background-color: #8abeb2}
+.bg-7{background-color: #7986CB}
+.bg-8{background-color: #E57373}
+.bg-9{}
+.bg-10{}
+
+.theme{
+	width:50px;
+	height: 50px;
+	border-radius: 50%;
+	cursor: pointer;
+	display: inline-block;
+	margin: 5px;
+}
+.active{
+	border: 3px solid grey;
+}
+
+</style>
+
+	<div class="wrap container" style="margin: 0 auto;">
+		<h1>Ajouter un nouveau de parcours</h1>
+			<form action="#">
+				<h4>Information parcours</h4>
+				<div class="form-group">
+				    <label for="parcours-title">Titre parcours</label>
+				    <input type="texte" class="form-control" id="parcours-title" placeholder="Titre parcours">
+			  	</div>
+
+			  	<div class="form-group">
+				    <label for="parcours-description">descritpion parcours — ces infomrmation apparaitrons au survole de la soris</label>
+				    <textarea class="form-control" rows="3" id="parcours-description"></textarea>
+			  	</div>
+
+			  	<div class="form-group">
+				    <label for="parcours-theme">Choississez la couleur du parcours</label><br>
+				    <div class="theme bg-1" id="theme1"></div>
+				    <div class="theme bg-2" id="theme2"></div>
+				    <div class="theme bg-3" id="theme3"></div>
+				    <div class="theme bg-4" id="theme4"></div>
+				    <div class="theme bg-5" id="theme5"></div>
+				    <div class="theme bg-6" id="theme6"></div>
+				    <div class="theme bg-7" id="theme7"></div>
+				    <div class="theme bg-8" id="theme8"></div>
+				    <div class="theme bg-9" id="theme9"></div>
+				    <div class="theme bg-10" id="theme10"></div>
+
+			  	</div>
+				
+				<div class="form-group">
+				    <button class="btn btn-default" type="submit" id="parcour-submit">Créer ce parcours</button>
+			  	</div>
+			</form>
+	</div>
+
+	<div class="container-fluid">
+		<h1>Les parcours</h1>
+	      	<div class="parcours">
+	         	<div class="row">
+		        </div>
+			</div>
+	</div>
+		
+
+	</body>
+<script>
+	$(function(){
+
+		var parcours;
+		  $('.parcours [class*="col-"]').mouseover(function(){
+		    parcours = $(this).children().text();
+		    $(this).css("font-size","1.2em");
+		    $(this).children(".parcours--title").css({"display":"none"});
+		    $(this).children(".parcours--content").css({"display":"block"});
+		  });
+
+		  $('.parcours [class*="col-"]').mouseout(function(){
+		    $(this).css("font-size","2.2em");
+		    $(this).children(".parcours--title").css({"display":"block"});
+		    $(this).children(".parcours--content").css({"display":"none"});
+		  });
+
+		$(".theme").click(function(){
+			$(".theme").each(function(){
+				$(this).removeClass("active");
+			});
+			$(this).toggleClass("active");
+		});
+
+		$("#parcour-submit").click(function(){	
+			var titre = $("input[id='parcours-title']").val();
+			var descritpion = $("#parcours-description").val();
+			var themeClass = $(".theme.active").attr("class");
+			var themeColor = themeClass.substring(5,11);
+
+			$('<div class="col-sm-4 col-xs-12 '+themeColor+'">'+'<h3 class="parcours--title">'+titre+'</h3>'+'<div class="parcours--content">'+descritpion+'</div>'+'</div>').appendTo(".row");
+
+		});
+
+		
+	});
+</script>
+
+
+	</html>
