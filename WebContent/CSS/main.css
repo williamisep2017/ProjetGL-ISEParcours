@@ -1,15 +1,38 @@
+/*-------------------------------------\
+--------------Main CSS-----------------\
+--------------------------------------*/
+
+/*--General--*/
 body {
   margin: 0px;
   padding: 0px;
   font-size: 1em;
   background-color: #f4f4f4;
+  font-familly:'Open Sans';
 }
 a{
   color:#A5D6A7;
 }
+.wrap--content{
+  margin-left:220px;
+  /*margin-top: 10px;*/
+}
+.bg-1{background-color: #9e87ce}
+.bg-2{background-color: #5c4b51}
+.bg-3{background-color: #e0cf75}
+.bg-4{background-color: #f5b65a}
+.bg-5{background-color: #f25f5c}
+.bg-6{background-color: #8abeb2}
+.bg-7{background-color: #7986CB}
+.bg-8{background-color: #E57373}
+.bg-9{background-color: #1E88E5}
+.bg-10{background-color: #689F38}
 
+.titre-page{
+	text-align:center;
+}
 
-/*nav-side-menu start*/
+/*--nav-side-menu start--*/
 .nav-side-menu {
   overflow: auto;
   font-family: verdana;
@@ -169,14 +192,7 @@ a{
 /*nav-side-menu End*/
 
 
-
-/*-------------------------------------\
---------------Main CSS-----------------\
---------------------------------------*/
-.wrap--content{
-  margin-left:220px;
-  /*margin-top: 10px;*/
-}
+/*--Search pop-up--*/
 #search-content{
     position: absolute;
     bottom: 0;
@@ -257,9 +273,7 @@ a{
   font-size: 3em;
 }
 
-.parcours{
-
-}
+/*--tuile parcours--*/
 
 .parcours [class*="col-"]{
   border: 4px solid #f4f4f4;
@@ -283,28 +297,114 @@ a{
   display: none;
   font-size: 1.2em;
 }
-.parcours [class*="col-"] .parcours--content [class*="parcours--content-S"]{
+.parcours [class*="col-"] .parcours--content [class*="parcours--content_description"]{
 border-left: 4px solid;
 border-color: rgba(0, 0, 0, 0.5);
 margin-top: 1em;
 }
-.parcours [class*="col-"] .parcours--content [class*="parcours--content-S1"]::before{
-content: "S1";
+
+
+/*-- Ajouter Parcours--*/
+.theme{
+	width:50px;
+	height: 50px;
+	border-radius: 50%;
+	cursor: pointer;
+	display: inline-block;
+	margin: 5px;
+}
+.form-group .choice{
+	border: 3px solid grey;
 }
 
-.bg-1{background-color: #9e87ce}
-.bg-2{background-color: #5c4b51}
-.bg-3{background-color: #e0cf75}
-.bg-4{background-color: #f5b65a}
-.bg-5{background-color: #f25f5c}
-.bg-6{background-color: #8abeb2}
-.bg-7{background-color: #7986CB}
-.bg-8{background-color: #E57373}
+.parcours-preview{
+  border: 4px solid #f4f4f4;
+  height: 220px;
+  width: 100%;
+  text-align: center;
+  font-family: "Open Sans";
+  font-size: 2.2em;
+  color: white;
+}
+.parcours-preview .parcours--title{
+	line-height:220px;
+}
 
+.parcours-preview h3{
+  margin: auto;
+}
+.parcours-preview:hover{
+  cursor: pointer;
+}
+.parcours-preview .parcours--content{
+  display: none;
+  font-size: 1.2em;
+}
+.parcours-preview .parcours--content [class*="parcours--content_description"]{
+border-left: 4px solid;
+border-color: rgba(0, 0, 0, 0.5);
+margin-top: 1em;
+}
 
+/*Step progressbar*/
+.progressbar{
+	counter-reset: step;
+}
+.progressbar li{
+	list-style-type: none;
+	float:left;
+	width: 33.33%;
+	position: relative;
+	text-align: center; 
+}
+.progressbar li:before{
+	content: counter(step);
+	counter-increment: step;
+	width: 40px;
+	height: 40px;
+	line-height: 39px;
+	border:2px solid #ddd;
+	display: block;
+	text-align: center;
+	margin: 0 auto 10px auto;
+	border-radius: 50%;
+	background-color: #f4f4f4;
+	cursor: pointer;
+}
+.progressbar li:after{
+	content:'';
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	background-color: #ddd;
+	top: 20px;
+	left: -50%;
+	z-index: -1;
+}
 
+.progressbar li:first-child:after{
+	content: none;
+}
 
+.progressbar li.active{
+	color:#f1c40f;
+}
+.progressbar li.active:before{
+	border-color:#f1c40f;
+}
 
+#progress_1.active::after, #progress_2.active::after, #progress_3.active::after{
+	background-color: #f1c40f;
+}
+
+#next_step, #prev_step{
+	border:1px solid #000;
+	border-radius:50%;
+	height:35px;
+	width:35px;
+	line-height:35px;
+	cursor:pointer;
+}
 
 /*--End MAIN CSS*/
 

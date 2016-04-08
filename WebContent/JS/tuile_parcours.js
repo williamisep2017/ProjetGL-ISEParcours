@@ -1,5 +1,5 @@
 /**
- * 
+ * annimation hoover de souris sur les tuiles v1.0
  */
 $(function(){
   var parcours;
