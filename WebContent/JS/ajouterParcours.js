@@ -107,8 +107,13 @@ $(function(){
 			$("#etape3").show().addClass("active");
 			$("#etape1, #etape2").hide().removeClass("active");
 			$('#progress_3').addClass("active");
+			$('#progress_2').addClass("active");
 		});
 		
+		/*Module check*/
+		$('.module__content').click(function(){
+			$(this).toggleClass('selected');
+		});
 		
 		/*Verification avant envoie bdd*/
 		$("#parcour-submit").click(function(){
