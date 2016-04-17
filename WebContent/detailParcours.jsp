@@ -22,29 +22,19 @@
 	<div class="wrap--content">
 		<div class="container-fluid">
 		<div class="detail_parcours-header">
+			
 			<div class="row">
-				<div class="detail_parcours-titleTop col-xs-12 bg-1"><h3>Architecte Système d'information</h3></div>
+				<div class="detail_parcours-titleTop col-md-12 bg-1"><h3>Architecte Système d'information</h3></div>
 			</div>
 			
 			<div class="row autre_parcours">
-				<div class="col-md-3 col-sm-4 col-xs-6" id="autre_parcours-1">
-						<div class="autre_parcours--title">Architecte système d'information</div>
-				</div>
-				<div class="col-md-3 col-sm-4 col-xs-6" id="autre_parcours-2">
-						<div class="autre_parcours--title">Architecte système d'information</div>
-				</div>
-				<div class="col-md-3 col-sm-4 col-xs-6" id="autre_parcours-3">
-						<div class="autre_parcours--title">Architecte système d'information</div>
-				</div>
-				<div class="col-md-3 col-sm-4 col-xs-6" id="autre_parcours-4">
-						<div class="autre_parcours--title">Architecte système d'information</div>
-				</div>
-				<div class="col-md-3 col-sm-4 col-xs-6" id="autre_parcours-5">
-						<div class="autre_parcours--title">Architecte système d'information</div>
-				</div>
-			</div>
-		
-		
+				<div class="autre_parcours--title col-md-3 col-sm-6 col-xs-6 " id="autre_parcours-1">Architecte système d'information1</div>
+				<div class="autre_parcours--title col-md-3 col-sm-6 col-xs-6" id="autre_parcours-2"">Architecte système d'information2</div>
+				<div class="autre_parcours--title col-md-3 col-sm-6 col-xs-6" id="autre_parcours-3">Architecte système d'information3</div>
+				<div class="autre_parcours--title col-md-3 col-sm-6 col-xs-6" id="autre_parcours-4">Architecte système d'information4</div>
+				<div class="autre_parcours--title col-md-3 col-sm-6 col-xs-6" id="autre_parcours-5">Architecte système d'information5</div>
+			</div><!-- End .autre_parcours -->
+				
 			<!-- Start horizontal navigation -->
 			<nav>
 				<div id="op-horizontalnav">
@@ -61,17 +51,38 @@
 		
 		
 		<!-- Wrapper sections -->
-		<div class="content">
+		<div class="allSection_content">
 			<section id="mysect1">
+			<h1>Description</h1>
 				<div class="section_content">
 					<p>fjkdzfnlsnfcjkdsenfckd</p><br/>
-				<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-				</div>
-				
+					<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+				</div>	
 			</section>
 			<section id="mysect2">
-				<h1>SECTION 2</h1>
-				<div class="section_content"></div>
+				<h1>Les cours</h1>
+				<div class="section_content">
+						<div class="row autre_parcours">
+				<div class="col-md-3 col-sm-4 col-xs-6" id="autre_parcours-1">
+						<div class="autre_parcours--title">Cours 1</div>
+				</div>
+				<div class="col-md-3 col-sm-4 col-xs-6" id="autre_parcours-2">
+						<div class="autre_parcours--title">Cours 2</div>
+				</div>
+				<div class="col-md-3 col-sm-4 col-xs-6" id="autre_parcours-3">
+						<div class="autre_parcours--title">Cours 3</div>
+				</div>
+				<div class="col-md-3 col-sm-4 col-xs-6" id="autre_parcours-4">
+						<div class="autre_parcours--title">Cours 4</div>
+				</div>
+				<div class="col-md-3 col-sm-4 col-xs-6" id="autre_parcours-5">
+						<div class="autre_parcours--title">Cours 5</div>
+				</div>
+				
+				
+				
+			</div>
+				</div>
 			</section>
 			<section id="mysect3">
 				<h1>SECTION 3</h1>

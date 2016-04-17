@@ -14,6 +14,7 @@ a{
   color:#A5D6A7;
   /*display: block;*/
 }
+
 	/*Bootsrap modif;*/
 /*textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {  
 border-color: rgba(126, 239, 104, 0.8);
@@ -191,6 +192,11 @@ outline: 0 none;}*/
   	left:0 !important;
   	right:0 !important;
   }
+  
+  .allSection_content{
+  	margin-top: 0 !important;
+  }
+  
 }
 @media (min-width: 769px) {
   .nav-side-menu .menu-list .menu-content {
@@ -527,18 +533,21 @@ margin-top: 1em;
 #op-verticalnav .op-v-link:hover .op-v-itemdesc {right:0px; }
 
 /*== Sections ==*/
+.allSection_content{
+	margin-top: 186px;
+}
 section h1 {
 	text-align:center; 
-	color:black; 
-	/*background:#333; */
+	color:#f4f4f4; 
+	background:#333;
 	border-top:1px solid rgba(165, 214, 167, 1); 
 	margin:0;
 }
 .section_content{
 	text-align:center;
-	padding:300px 50px; 
+	padding:20px 50px 450px 50px; 
 	height: auto;
-	background: orange;
+	background:#0FC2AD;
 }
 section:nth-child(even) h1 {background:#222;} /*on différencie la couleur 1 section sur 2*/
 
