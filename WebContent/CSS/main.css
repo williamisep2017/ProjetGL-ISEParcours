@@ -12,7 +12,15 @@ body {
 }
 a{
   color:#A5D6A7;
+  /*display: block;*/
 }
+
+	/*Bootsrap modif;*/
+/*textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {  
+border-color: rgba(126, 239, 104, 0.8);
+box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(126, 239, 104, 0.6);
+outline: 0 none;}*/
+
 .wrap--content{
   margin-left:220px;
   /*margin-top: 10px;*/
@@ -93,11 +101,11 @@ a{
 }
 .nav-side-menu ul .sub-menu li.active,
 .nav-side-menu li .sub-menu li.active {
-  color: #d19b3d;
+  color: #A5D6A7;
 }
 .nav-side-menu ul .sub-menu li.active a,
 .nav-side-menu li .sub-menu li.active a {
-  color: #d19b3d;
+  color: #A5D6A7;
 }
 .nav-side-menu ul .sub-menu li,
 .nav-side-menu li .sub-menu li {
@@ -178,6 +186,17 @@ a{
   #search input[type="search"]{
     font-size: 3em !important;
   }
+  
+  .detail_parcours-header{
+  	position:relative !important;
+  	left:0 !important;
+  	right:0 !important;
+  }
+  
+  .allSection_content{
+  	margin-top: 0 !important;
+  }
+  
 }
 @media (min-width: 769px) {
   .nav-side-menu .menu-list .menu-content {
@@ -346,6 +365,15 @@ border-color: rgba(0, 0, 0, 0.5);
 margin-top: 1em;
 }
 
+/*Tab ajout ou gestion*/
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus{
+	background-color:#f4f4f4;
+}
+.nav-tabs>li>a{
+	color: #ddd;
+}
+.nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus{}
+
 /*Step progressbar*/
 .progressbar{
 	counter-reset: step;
@@ -387,14 +415,20 @@ margin-top: 1em;
 }
 
 .progressbar li.active{
-	color:#f1c40f;
+	color:#A5D6A7; /*#f1c40f;*/
 }
 .progressbar li.active:before{
-	border-color:#f1c40f;
+	border-color:#A5D6A7; /*#f1c40f;*/
 }
 
 #progress_1.active::after, #progress_2.active::after, #progress_3.active::after{
-	background-color: #f1c40f;
+	background-color: #A5D6A7; /*#f1c40f;*/
+}
+
+.pager{
+	position: fixed;
+	bottom: 0;
+	left: 50%;
 }
 
 #next_step, #prev_step{
@@ -405,6 +439,117 @@ margin-top: 1em;
 	line-height:35px;
 	cursor:pointer;
 }
+
+/*-- Modules de création parcours*/
+.module__content{
+	background-color:#E0E0E0;
+	height:35px;
+	line-height:35px;
+	text-align:center;
+	cursor:pointer;
+	border: 1px solid #f4f4f4;
+}
+.module__content:hover{
+	background-color:#BDBDBD;
+}
+.module__content.selected{
+	background-color: #FFE57F;
+}
+.module__content--title{
+	font-size:1.35em;
+	font-weight:bold;
+}
+/*-- Modules de création module*/
+
+/*-- detailParcours*/
+
+.detail_parcours-header{
+	position: fixed;
+    left: 235px;
+    right: 15px;
+    z-index: 999;
+    background: #f4f4f4;
+}
+.detail_parcours-titleTop{
+	text-align:center;
+	height: 50px;
+	margin-bottom:15px;
+}
+.autre_parcours{
+	margin-bottom:15px;
+	padding: 0 15px;
+}
+
+.autre_parcours [id*="autre_parcours-"]{
+	height:30px;
+	line-height:30px;
+	background-color: gray;
+	border: 1px solid #f4f4f4;
+	cursor: pointer;
+}
+.detail_parcours-titleTop h3{
+	margin-top:0;
+	margin-bottom: 0;
+	line-height:50px;
+}
+
+#op-horizontalnav {
+	background:#2e353d; 
+}
+#op-horizontalnav .op-sectionlist {
+	width:100%; 
+	max-width:1280px; 
+	margin:auto;
+	padding:0; 
+	text-align:center; 
+	display:table;
+}
+#op-horizontalnav .op-v-item {
+	list-style:none; 
+	display:table-cell; 
+	font-size:16px
+}
+#op-horizontalnav .op-v-item .op-v-link {
+	color:#fff; 
+	padding:12px 8px;
+	display:block;
+	text-decoration:none
+}
+#op-horizontalnav .op-v-item .op-v-link:hover, #op-horizontalnav .op-v-link.active {
+	background-color:#A5D6A7;
+	color:#171717;
+}
+
+/*== V nav ==*/
+#op-verticalnav {position:fixed; top:0; right:0; left: auto;height: 100%;display:table}
+#op-verticalnav .op-sectionlist {height:100%; text-align:center; display:table-cell; vertical-align:middle}
+#op-verticalnav .op-v-item {display:block}
+#op-verticalnav .justify-height {}
+#op-verticalnav .op-v-link {display:block; margin:12px 0}
+#op-verticalnav .v-marker {width:15px; height:15px; border-radius:50%; background-color:rgba(165, 214, 167, .4); display:inline-block; vertical-align:middle; margin-bottom:-2px; margin-right:10px; border: 1px solid rgba(165, 214, 167, 1);}
+#op-verticalnav .op-v-link:hover .v-marker, #op-verticalnav .op-v-item .op-v-link.active .v-marker {background-color:rgba(165, 214, 167, 1); }
+#op-verticalnav .op-v-itemdesc {display:inline-block; font-size:14px; position:absolute; white-space:nowrap; line-height:normal; padding:0 34px 0 0;vertical-align:middle}
+#op-verticalnav .op-v-itemdesc .op-v-itembg{display:inline-block; background-color:rgba(0,0,0,.5); color:#fff; padding:4px 10px 6px 10px; border:1px solid rgba(165, 214, 167, 1); border-radius:4px; }
+#op-verticalnav .op-v-link:hover .op-v-itemdesc {right:0px; }
+
+/*== Sections ==*/
+.allSection_content{
+	margin-top: 186px;
+}
+section h1 {
+	text-align:center; 
+	color:#f4f4f4; 
+	background:#333;
+	border-top:1px solid rgba(165, 214, 167, 1); 
+	margin:0;
+}
+.section_content{
+	text-align:center;
+	padding:20px 50px 450px 50px; 
+	height: auto;
+	background:#0FC2AD;
+}
+section:nth-child(even) h1 {background:#222;} /*on différencie la couleur 1 section sur 2*/
 
 /*--End MAIN CSS*/
 

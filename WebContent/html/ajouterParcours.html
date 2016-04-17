@@ -18,12 +18,21 @@
 
 <div class="wrap--content">
 	<div class="container-fluid">
-		<h1 class="titre-page">Ajouter un nouveau parcours</h1>
+		<div style="margin-top: 10px;"></div>
+		<ul class="nav nav-tabs" role="tablist">
+		    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"><h2 class="titre-page">Ajouter un nouveau parcours</h2></a></li>
+		    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"><h2 class="titre-page">Gestion de parcours</h2></a></li>
+	  	</ul>
+		 <div class="tab-content">
+		    <div role="tabpanel" class="tab-pane active" id="home"></div>
+		    <div role="tabpanel" class="tab-pane" id="profile"></div>
+		  </div>
+		  <div style="margin-top: 50px;"></div>
 		<div class="row">
 			<div class="etape">
 				<ul class="progressbar">
 					<li class="active" id="progress_1">Parcours</li>
-					<li id="progress_2">Description</li>
+					<li id="progress_2">Modules</li>
 					<li id="progress_3">Validation</li>
 				</ul>
 			</div>
@@ -72,11 +81,46 @@
 		</div><!-- End #Etape1 -->
 		
 		<div class="row" id="etape2">
-			<p>Etape 2.</p>
+			<div class="row">
+				<h4>Sélectionnez les modules propres à ce parcours</h4>
+				<div class="module__content col-md-3 col-sm-4 col-xs-6">
+					<div class="module__content--title">Technologie Web</div>
+				</div>
+				<div class="module__content col-md-3 col-sm-4 col-xs-6">
+					<div class="module__content--title">Technologie Web</div>
+				</div>
+				<div class="module__content col-md-3 col-sm-4 col-xs-6">
+					<div class="module__content--title">Technologie Web</div>
+				</div>
+				<div class="module__content col-md-3 col-sm-4 col-xs-6">
+					<div class="module__content--title">Technologie Web</div>
+				</div>
+				<div class="module__content col-md-3 col-sm-4 col-xs-6">
+					<div class="module__content--title">Technologie Web</div>
+				</div>
+				<div class="module__content col-md-3 col-sm-4 col-xs-6">
+					<div class="module__content--title">Technologie Web</div>
+				</div>
+				<div class="module__content col-md-3 col-sm-4 col-xs-6">
+					<div class="module__content--title">Technologie Web</div>
+				</div>
+				<div class="module__content col-md-3 col-sm-4 col-xs-6">
+					<div class="module__content--title">Technologie Web</div>
+				</div>
+				<div class="module__content col-md-3 col-sm-4 col-xs-6">
+					<div class="module__content--title">Technologie Web</div>
+				</div>
+				
+				
+			</div>
+			<div class="row">
+				<h4>Ajoutez un nouveau module</h4>
+			</div>
 		</div><!-- End #Etape2 -->
 		
+		
 		<div class="row" id="etape3">
-			<p>Etape 3</p>
+			<p>Validation</p>
 			<form>
 			<div class="form-group">
 				    <button class="btn btn-default" type="submit" id="parcour-submit">Créer ce parcours</button>
@@ -95,5 +139,6 @@
 </div>	
 	
 	</body>
+	<script src="JS/menu.js"></script>
 	<script src="JS/ajouterParcours.js"></script>
 	</html>
