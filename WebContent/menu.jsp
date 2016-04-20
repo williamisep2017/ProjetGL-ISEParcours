@@ -19,7 +19,7 @@
                  	<a href="ajouterParcours.jsp"><i class="fa fa-gavel fa-lg"></i> Créer un parcours</a>
                  </li><!--End menu fixe-->
                  <li>
-                 	<a href="tuileParcours.jsp"><i class="fa fa-user fa-lg"></i> Profile</a>
+                 	<a href="profil.jsp"><i class="fa fa-user fa-lg"></i> Profil</a>
                  </li>
             </ul><!--#End menu-content-->
             

@@ -9,6 +9,7 @@ body {
   font-size: 1em;
   background-color: #f4f4f4;
   font-familly:'Open Sans';
+  overflow-x:hidden;
 }
 a{
   color:#A5D6A7;
@@ -38,6 +39,19 @@ outline: 0 none;}*/
 
 .titre-page{
 	text-align:center;
+}
+.msg_error-bottom{
+	position: fixed;
+	bottom: 0;
+	right:0;
+	left:220px;
+}
+.alert{
+margin-bottom:0px;	
+}
+.alert-warning{
+	width: 100%;
+    margin-top: 20px;
 }
 
 /*--nav-side-menu start--*/
@@ -551,6 +565,43 @@ section h1 {
 }
 section:nth-child(even) h1 {background:#222;} /*on différencie la couleur 1 section sur 2*/
 
+
+/*profil*/
+.profil-menu_top{
+	margin-top: 10px;
+}
+
+/*profil_detail*/
+.profil_detail-content{
+	margin: 50px 0;
+}
+
+.profil_depot-fichier{
+	height: 150px;
+	text-align:center;
+	background: rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+}
+.profil_depot-fichier h4{
+	line-height:150px;
+}
+.profil_information-personnel{
+	font-size: 1.5em;
+	margin-left: 20px;
+	width: 50%;
+	margin-top:20px;
+}
+.profil_information-personnel .info-title_label{
+	float: left;
+	color:#A5D6A7;
+}
+.profil_information-personnel--modification{
+	margin-left:20px;
+}
+
+#profil_modifier-info{
+	cursor: pointer;
+}
 /*--End MAIN CSS*/
 
 
