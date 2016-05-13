@@ -629,6 +629,33 @@ section:nth-child(even) h1 {background:#222;} /*on différencie la couleur 1 sec
 	border-bottom : 2px solid #2e353d;
 	padding: 10px;
 }
+
+/*--Connexion--*/
+
+.form-signin {
+	max-width:400px;
+	margin: 0 auto;
+}
+
+/*--International--*/
+
+.intlhead1 {
+	text-align:center;
+	height: 50px;
+	margin-bottom:15px;
+}
+
+.intlhead2 {
+	text-align:center;
+	margin-bottom:15px;
+}
+
+.intl_search {
+	text-align: center;
+	width: 600px;
+	height: 20px;
+	margin-bottom: 15px;
+}
 /*--End MAIN CSS*/
 
 
