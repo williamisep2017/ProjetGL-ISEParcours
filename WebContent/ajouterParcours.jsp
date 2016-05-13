@@ -133,7 +133,8 @@
 		    <li><i class="fa fa-angle-right fa-3x" id="next_step"></i></li>
 		  </ul>
 		</nav>
-		
+
+
 	</div>
 </div>	
 	
