@@ -473,6 +473,34 @@ margin-top: 1em;
 	font-size:1.35em;
 	font-weight:bold;
 }
+
+.ajout_Module{
+	height: 50px;
+	background-color: #A5D6A7;
+	color: rgba(1, 1, 1, 0.5);
+	border: 5px solid #f4f4f4;
+	line-height:50px;
+	cursor: pointer;
+}
+
+.ajout_Module .plus::before{
+  font-family: FontAwesome;
+  content: "\f055";
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  vertical-align: middle;
+  float: right;
+}
+
+.module_form{
+	margin: 5px;
+	border-left : 2px solid #2e353d;
+	border-right : 2px solid #2e353d;
+	border-bottom : 2px solid #2e353d;
+	padding: 10px;
+}
+
 /*-- Modules de création module*/
 
 /*-- detailParcours*/

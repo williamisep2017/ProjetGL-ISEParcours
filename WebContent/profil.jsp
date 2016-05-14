@@ -28,8 +28,13 @@
 				    <li role="presentation"><a href="#formation" aria-controls="formation" role="tab" data-toggle="tab"><h2 class="titre-page">Ma formation</h2></a></li>
 			  	</ul>
 				 <div class="tab-content">
-				    <div role="tabpanel" class="tab-pane active" id="profil"><%@ include file="profil_detail.jsp" %></div>
-				    <div role="tabpanel" class="tab-pane" id="formation"><%@ include file="profil_formation.jsp" %></div>
+				    <div role="tabpanel" class="tab-pane active" id="profil">
+				    	<%@ include file="profil_detail.jsp" %>
+				    </div>
+				    
+				    <div role="tabpanel" class="tab-pane" id="formation">
+				    	<%@ include file="profil_formation.jsp" %>
+				    </div>
 				  </div>
 			</div><!-- End .profil-menu_top -->
 		

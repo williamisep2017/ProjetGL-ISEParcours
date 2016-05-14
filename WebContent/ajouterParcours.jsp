@@ -47,12 +47,17 @@
 			<form action="#">
 				<h4>Information parcours</h4>
 				<div class="form-group">
-				    <label for="parcours-title">Titre Parcours</label>
-				    <input type="text" class="form-control" id="parcours-title" placeholder="Titre parcours">
+				    <label for="parcours-title">Titre du Parcours</label>
+				    <input type="text" class="form-control" id="parcours-title" placeholder="Titre du parcours">
+			  	</div>
+			  	
+			  	<div class="form-group">
+				    <label for="parcours-responsable">Responsable de Parcours</label>
+				    <input type="text" class="form-control" id="parcours-responsable" placeholder="Responsable du parcours">
 			  	</div>
 
 			  	<div class="form-group">
-				    <label for="parcours-description">Descritpion parcours — Ces infomrmations apparaitront au survole de la souris</label>
+				    <label for="parcours-description">Descritpion du parcours — Ces infomrmations apparaitront au survole de la souris</label>
 				    <textarea class="form-control" rows="3" id="parcours-description" placeholder="Brève description..."></textarea>
 			  	</div>
 
@@ -78,13 +83,15 @@
 	              		<h3 class="parcours--title">Titre</h3>
 	              			<div class="parcours--content">
 	                			<div class="parcours--content_title">Titre</div>
+	                			<div class="parcours--content_responsable">Responsable</div>
 	                			<div class="parcours--content_descritpion">Description</div>
 	              			</div>
 		         </div>
 			</div>
 		</div><!-- End #Etape1 -->
 		
-		<div class="row" id="etape2">
+		<div id="etape2">
+			<div class="row" >
 			
 				<h4>Sélectionnez les modules propres à ce parcours</h4>
 				<div class="module__content col-md-3 col-sm-4 col-xs-6">
@@ -114,8 +121,30 @@
 				<div class="module__content col-md-3 col-sm-4 col-xs-6">
 					<div class="module__content--title">Technologie Web</div>
 				</div>
+			</div>
 			
-				<h4>Ajoutez un nouveau module</h4>
+			<div class="col-md-12 ajout_Module" id="ajout_Module" data-toggle="collapse" data-target="#form_Module">
+				<h4>Créer un nouveau module <i class="fa fa-certificate" aria-hidden="true"></i><span class="plus"></span></h4>
+			</div>
+			<div id="form_Module" class="collapse">
+				<form class="module_form">
+				  <div class="form-group">
+				    <label for="module_titre">Titre</label>
+				    <input type="text" class="form-control" id="module_titre">
+				  </div>
+				  <div class="form-group">
+				    <label for="module_reponsable">Responsable du module</label>
+				    <input type="text" class="form-control" id="module_repesponsable">
+				  </div>
+				  <div class="form-group">
+				    <label for="module_description">Description du module</label>
+				    <textarea class="form-control" rows="3" id="module_description" placeholder="Brève description..."></textarea>
+				  </div>
+				  <button type="submit" class="btn btn-default btn_add-module">Ajouter ce module</button>
+				</form>
+			</div><!-- End collapse content -->
+			
+<!-- 				<h4>Ajoutez un nouveau module</h4> -->
 		</div><!-- End #Etape2 -->
 		
 		<div class="row" id="etape3">

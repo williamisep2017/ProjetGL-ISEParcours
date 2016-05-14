@@ -38,6 +38,11 @@ $(function(){
 			$('.parcours--content_title').text(title);
 		});
 		
+		$('#parcours-responsable').keyup(function(){
+			var desc = $(this).val();
+			$('.parcours--content_responsable').text(desc);
+		});
+		
 		$('#parcours-description').keyup(function(){
 			var desc = $(this).val();
 			$('.parcours--content_descritpion').text(desc);
@@ -118,6 +123,7 @@ $(function(){
 		/*Verification avant envoie bdd*/
 		$("#parcour-submit").click(function(){
 			var titre = $("input[id='parcours-title']").val();
+			var description = $("#parcours-responsable").val();
 			var description = $("#parcours-description").val();
 			var themeClass = $(".theme.choice").attr("class");
 			var themeColor = themeClass.substring(5,11);

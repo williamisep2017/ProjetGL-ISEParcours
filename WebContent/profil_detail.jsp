@@ -43,7 +43,8 @@
 		<div class="col-md-3">
 			<img src="html/image_de_profil.jpg" alt="..." class="img-circle" style="width:140px; height:140px;">
 		</div>
-	</div>
+	</div><!-- END photo de profil -->
+	
 	<div class="row">
 		<div class="col-md-12 ajout_Profil-information" id="ajout_experience" data-toggle="collapse" data-target="#form_exp">
 			<h4>Ajouter une experience <i class="fa fa-certificate" aria-hidden="true"></i><span class="plus"></span></h4>
