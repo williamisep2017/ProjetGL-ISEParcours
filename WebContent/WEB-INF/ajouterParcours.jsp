@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>  
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -21,7 +22,6 @@
 
 <div class="wrap--content">
 	<div class="container-fluid">
-	
 		<div style="margin-top: 10px;"></div>
 		<ul class="nav nav-tabs" role="tablist">
 		    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"><h2 class="titre-page">Ajouter un nouveau parcours</h2></a></li>
@@ -44,21 +44,21 @@
 		
 		<div class="row active" id="etape1">
 		   <div class="col-sm-8 col-xs-12">
-			<form action="#">
+			<form method="POST" action="AjouterParcours">
 				<h4>Information parcours</h4>
 				<div class="form-group">
 				    <label for="parcours-title">Titre du Parcours</label>
-				    <input type="text" class="form-control" id="parcours-title" placeholder="Titre du parcours">
+				    <input type="text" class="form-control" id="parcours-title" name="parcours-title" placeholder="Titre du parcours">
 			  	</div>
 			  	
 			  	<div class="form-group">
-				    <label for="parcours-responsable">Responsable de Parcours</label>
-				    <input type="text" class="form-control" id="parcours-responsable" placeholder="Responsable du parcours">
+				    <label for="presponsable">Responsable de Parcours</label>
+				    <input type="text" class="form-control" name="presponsable" id="presponsable" placeholder="Responsable du parcours">
 			  	</div>
 
 			  	<div class="form-group">
 				    <label for="parcours-description">Descritpion du parcours — Ces infomrmations apparaitront au survole de la souris</label>
-				    <textarea class="form-control" rows="3" id="parcours-description" placeholder="Brève description..."></textarea>
+				    <textarea class="form-control" rows="3" id="parcours-description" name="parcours-description" placeholder="Brève description..."></textarea>
 			  	</div>
 
 			  	<div class="form-group">
@@ -74,6 +74,7 @@
 				    <div class="theme bg-9" id="theme9"></div>
 				    <div class="theme bg-10" id="theme10"></div>
 			  	</div>
+			  <button class="btn btn-default" type="submit" id="parcour-submit">Créer ce parcours</button>
 			</form>
 			</div>
 			
@@ -127,18 +128,18 @@
 				<h4>Créer un nouveau module <i class="fa fa-certificate" aria-hidden="true"></i><span class="plus"></span></h4>
 			</div>
 			<div id="form_Module" class="collapse">
-				<form class="module_form">
+				<form class="module_form" method="POST" action="AjouterModule"> 
 				  <div class="form-group">
 				    <label for="module_titre">Titre</label>
-				    <input type="text" class="form-control" id="module_titre">
+				    <input type="text" class="form-control" id="module_titre" name="module-title">
 				  </div>
 				  <div class="form-group">
 				    <label for="module_reponsable">Responsable du module</label>
-				    <input type="text" class="form-control" id="module_repesponsable">
+				    <input type="text" class="form-control" id="module_repesponsable" name="mresponsable">
 				  </div>
 				  <div class="form-group">
 				    <label for="module_description">Description du module</label>
-				    <textarea class="form-control" rows="3" id="module_description" placeholder="Brève description..."></textarea>
+				    <textarea class="form-control" rows="3" id="module_description" placeholder="Brève description..." name="module-description"></textarea>
 				  </div>
 				  <button type="submit" class="btn btn-default btn_add-module">Ajouter ce module</button>
 				</form>
@@ -147,7 +148,7 @@
 <!-- 				<h4>Ajoutez un nouveau module</h4> -->
 		</div><!-- End #Etape2 -->
 		
-		<div class="row" id="etape3">
+		<div class="row" id="etape3">				
 			<p>Validation</p>
 			<form>
 			<div class="form-group">

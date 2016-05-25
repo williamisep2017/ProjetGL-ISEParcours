@@ -3,7 +3,7 @@
  * Ce script gère aussi le position margin si il y a eu une modification après livrable
  */
 $(function() {
-	
+	  
 	/* ====== Ajouter un margin au .allSection_content si il est différent du margin de base (si il y eu une modification après Livrable===== */
 
 	function modifierMargin(){
@@ -14,6 +14,10 @@ $(function() {
 			$(".allSection_content").css("margin-top", tailHeader+"px");
 		}
 	}
+	$('.detail_parcours-header').resize(function(){
+		alert('ok');
+		modifierMargin();
+	});
 	modifierMargin();
 	
 	$( window ).resize(function() {
@@ -38,7 +42,6 @@ $(function() {
 	      var href = $(this).attr('href').replace('#', '') // on scroll vers la cible
 	      scrollToAnchor( href ); 
 	      }
-	  
 	  });
 	  
 	  
@@ -61,6 +64,57 @@ $(function() {
 			  }
 		  });
 	  });
-	
+	  
+	  
+	  $('.autre_parcours--title').mouseenter(function(){
+		  var bordercolor = $(this).css("border-left");
+		  var color = bordercolor.substr(10, 19);
+		  $(this).css("background-color", color);
+	  });
+	  
+	  $('.autre_parcours--title').mouseleave(function(){
+		  var color = $(this).css("border");
+		  $(this).css("background-color", "");
+	  });
+	  
+	  $('.autre_parcours--title').click(function(){
+		  var identifiantParcours = $(this).attr("data-idparcours");
+		  window.location.replace("http://localhost:8080/isep-parcours/DetailParcours?idParcours="+identifiantParcours);
+	  });
+	  
+
+	  var Hwindow = $(window);
+      Hwindow.scroll(function () {
+          if (Hwindow.scrollTop()  < 280 && Hwindow.scrollTop()  > 200){
+        	  $('.autre_parcours-contener').slideUp(300);
+          }else if (Hwindow.scrollTop()  == 0 ){
+        	  $('.autre_parcours-contener').slideDown(400);
+          }
+      });
+      
+      
+      
+      
+//      Innitialisation pour afficher le contenu du module en question
+      $('#mysect2 .section_content .row .detail_parcours-modules:first-child h4').addClass("active");
+      
+      if($('#mysect2 .section_content .row .detail_parcours-modules:first-child h4').hasClass("active")){
+    	  var moduleis_Active = $("#mysect2 .section_content .row .detail_parcours-modules").attr("data-idModule");
+    	  $(".modules_description[data-idModule="+moduleis_Active+"]").show();
+      }
+      
+      $('#mysect2 .section_content .row .detail_parcours-modules h4').click(function(){
+    	  var moduleis_Active = $(this).parent().attr("data-idModule");
+    	  $('#mysect2 .section_content .row .detail_parcours-modules h4').each(function(){
+    		  $(this).removeClass("active");
+    		  $(".modules_description").hide();
+    	  });
+    	 $(this).addClass("active");
+   	  	 $(".modules_description[data-idModule="+moduleis_Active+"]").show(); 
+      });
+	  
 });
+
+
+
   

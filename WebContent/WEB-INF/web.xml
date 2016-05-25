@@ -1,12 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app id="WebApp_ID" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
 	<display-name>isep-parcours</display-name>
-	<welcome-file-list>
-		<welcome-file>index.html</welcome-file>
-		<welcome-file>index.htm</welcome-file>
-		<welcome-file>index.jsp</welcome-file>
-		<welcome-file>default.html</welcome-file>
-		<welcome-file>default.htm</welcome-file>
-		<welcome-file>default.jsp</welcome-file>
-	</welcome-file-list>
+	<servlet>
+		<description>
+		</description>
+		<display-name>AjouterParcours</display-name>
+		<servlet-name>AjouterParcours</servlet-name>
+		<servlet-class>com.indigo.servlets.AjouterParcours</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>index</display-name>
+		<servlet-name>index</servlet-name>
+		<servlet-class>com.indigo.servlets.index</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>GestionAffichageTuiles</display-name>
+		<servlet-name>GestionAffichageTuiles</servlet-name>
+		<servlet-class>com.indigo.servlets.GestionAffichageTuiles</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>DetailParcours</display-name>
+		<servlet-name>DetailParcours</servlet-name>
+		<servlet-class>com.indigo.servlets.DetailParcours</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>Search</display-name>
+		<servlet-name>Search</servlet-name>
+		<servlet-class>com.indigo.servlets.Search</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>Connexion</display-name>
+		<servlet-name>Connexion</servlet-name>
+		<servlet-class>com.indigo.servlets.Connexion</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>AjouterModule</display-name>
+		<servlet-name>AjouterModule</servlet-name>
+		<servlet-class>com.indigo.servlets.AjouterModule</servlet-class>
+	</servlet>
+	
+	
+	<servlet-mapping>
+		<servlet-name>AjouterParcours</servlet-name>
+		<url-pattern>/AjouterParcours</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>index</servlet-name>
+		<url-pattern>/index</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GestionAffichageTuiles</servlet-name>
+		<url-pattern>/GestionAffichageTuiles</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DetailParcours</servlet-name>
+		<url-pattern>/DetailParcours</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Search</servlet-name>
+		<url-pattern>/Search</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Connexion</servlet-name>
+		<url-pattern>/Connexion</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AjouterModule</servlet-name>
+		<url-pattern>/AjouterModule</url-pattern>
+	</servlet-mapping>
+
+
+	<listener>
+    	<listener-class>com.indigo.config.InitialisationDaoFactory</listener-class>
+	</listener>
 </web-app>

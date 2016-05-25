@@ -24,7 +24,6 @@ outline: 0 none;}*/
 
 .wrap--content{
   margin-left:220px;
-  /*margin-top: 10px;*/
 }
 .bg-1{background-color: #9e87ce}
 .bg-2{background-color: #5c4b51}
@@ -52,6 +51,17 @@ margin-bottom:0px;
 .alert-warning{
 	width: 100%;
     margin-top: 20px;
+}
+
+.erreur{
+	color :red;
+	width:100%;
+	height: 40px;
+}
+.success{
+	color:green;
+	width:100%;
+	height: 40px;
 }
 
 /*--nav-side-menu start--*/
@@ -265,7 +275,7 @@ margin-bottom:0px;
   transform: translate(0px, 0px) scale(1, 1); 
   opacity: 1;
   position: absolute;
-  z-index: 99;
+  z-index: 999999999;
 }
 
 #search input[type="search"] {
@@ -310,13 +320,13 @@ margin-bottom:0px;
 
 .parcours [class*="col-"]{
   border: 4px solid #f4f4f4;
- /* height: 220px;*/
   min-height: 50vh;
   display: flex;
   text-align: center;
   font-family: "Open Sans";
   font-size: 2.2em;
   color: white;
+  text-overflow: ellipsis;
 }
 
 .parcours [class*="col-"] h3{
@@ -325,16 +335,27 @@ margin-bottom:0px;
 .parcours [class*="col-"]:hover{
   /*opacity: 0.8;*/
   cursor: pointer;
+  text-overflow: ellipsis;
 }
 .parcours [class*="col-"] .parcours--content{
   display: none;
   font-size: 1.2em;
+  width:100%;
+  text-overflow: ellipsis;
 }
 .parcours [class*="col-"] .parcours--content [class*="parcours--content_description"]{
-border-left: 4px solid;
+/* border-left: 4px solid; */
 border-color: rgba(0, 0, 0, 0.5);
 margin-top: 1em;
+overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 7;
+    line-height: normal;
 }
+
+
 
 
 /*-- Ajouter Parcours--*/
@@ -506,6 +527,8 @@ margin-top: 1em;
 /*-- detailParcours*/
 
 .detail_parcours-header{
+	margin-left: -15px;
+    margin-right: -15px;
 	position: fixed;
     left: 235px;
     right: 15px;
@@ -513,13 +536,31 @@ margin-top: 1em;
     background: #f4f4f4;
 }
 .detail_parcours-titleTop{
+	margin-left: 15px;
+    margin-right: 15px;
 	text-align:center;
 	height: 50px;
 	margin-bottom:15px;
+	color:#333;
 }
 .autre_parcours{
 	margin-bottom:15px;
 	padding: 0 15px;
+}
+
+.autre_parcours--title{
+	height: 24px;
+	line-height:24px;
+	font-family:"open sans";
+	font-size: 12px;
+    font-weight: 400;
+    cursor:pointer;
+    margin-bottom: 4px;
+    padding-left: 8px;
+}
+
+.autre_parcours-contener{
+	margin-left: 2px;
 }
 
 .autre_parcours [id*="autre_parcours-"]{
@@ -535,8 +576,42 @@ margin-top: 1em;
 	line-height:50px;
 }
 
+.detail_parcours-modules{
+    margin-bottom: 5px;
+}
+
+
+.detail_parcours-modules h4{
+	border: 1px solid #333;
+    height: auto;
+    font-size:12px;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 0 15px;
+    line-height: 25px;
+    margin: 0;
+}
+
+.detail_parcours-modules h4:hover{
+	color:#dedede;
+	background-color:#333;
+}
+.detail_parcours-modules h4.active{
+	color:#dedede;
+	background-color:#333;
+}
+
+.modules_description{
+	margin-top:40px;
+	font-size:17px;
+	font-family:"open sans";
+	text-align: justify;
+	display: none;
+}
+
 #op-horizontalnav {
-	background:#2e353d; 
+/* 	background:#2e353d;  */
+border-bottom:1px solid #D1D1D7;
 }
 #op-horizontalnav .op-sectionlist {
 	width:100%; 
@@ -552,13 +627,13 @@ margin-top: 1em;
 	font-size:16px
 }
 #op-horizontalnav .op-v-item .op-v-link {
-	color:#fff; 
+	color:#72727D;
 	padding:12px 8px;
 	display:block;
 	text-decoration:none
 }
 #op-horizontalnav .op-v-item .op-v-link:hover, #op-horizontalnav .op-v-link.active {
-	background-color:#A5D6A7;
+	border-bottom: 3px solid #A5D6A7;
 	color:#171717;
 }
 
@@ -577,22 +652,43 @@ margin-top: 1em;
 /*== Sections ==*/
 .allSection_content{
 	margin-top: 186px;
+	background-color:#fff;
 }
+
+.allSection_content h1{
+	padding-top:17px;
+	font-size: 70px;
+	font-family:"open sans";
+}
+
 section h1 {
 	text-align:center; 
-	color:#f4f4f4; 
-	background:#333;
-	border-top:1px solid rgba(165, 214, 167, 1); 
+	color:#171717; 
+	background:#fff;
+/* 	border-top:1px solid rgba(165, 214, 167, 1);  */
 	margin:0;
 }
 .section_content{
 	text-align:center;
 	padding:20px 50px 450px 50px; 
 	height: auto;
-	background:#0FC2AD;
+	background:white;
+/* 	background:#0FC2AD; */
 }
-section:nth-child(even) h1 {background:#222;} /*on différencie la couleur 1 section sur 2*/
+section:nth-child(even) h1 {background:#fff;} /*on différencie la couleur 1 section sur 2*/
 
+#mysect1 .section_content p{
+	font-size: 16px;
+    font-family: "open sans";
+    margin: 20px 0;
+    height: auto;
+    text-align: justify;
+}
+#mysect2 .section_content, /*#mysect3 .section_content,*/ #mysect4 .section_content, #mysect2  h1, #mysect4  h1{
+	background: #dedede;
+    margin: 0 12px
+}
+    
 
 /*profil*/
 .profil-menu_top{
@@ -659,10 +755,73 @@ section:nth-child(even) h1 {background:#222;} /*on différencie la couleur 1 sec
 }
 
 /*--Connexion--*/
+.connexion_template{
+	background-color: #2e353d;
+	width: 100%;
+	height:100%
+}
 
-.form-signin {
-	max-width:400px;
-	margin: 0 auto;
+.form-Connexion {
+	position: absolute;
+    top: 30%;
+    left: 35%;
+}
+
+.form-Connexion .btn_connexion{
+	background-color: transparent;
+	height: 50px;
+	width: 350px;
+	border: 1px solid #F4F4F4;
+	font-size: 18px;
+	color: #F4F4F4;
+	margin:10px;
+	border:0px;
+}
+.form-Connexion .btn_connexion:hover{
+	background-color: #26C281;
+}
+
+
+
+#inputEmail::-webkit-input-placeholder, #inputPassword::-webkit-input-placeholder, #inputType::-webkit-input-placeholder {
+  color: #F4F4F4;
+}
+
+.Connexion_retour{
+	width:60px;
+	height:60px;
+	position: absolute;
+	margin:20px;
+	border:1px solid #f4f4f4;
+	border-radius:50%;
+	cursor:pointer;
+	
+}
+
+.Connexion_retour .fa{
+	color:#f4f4f4;
+	line-height:60px;
+	left: 33%;
+    position: relative;
+}
+
+
+.form-Connexion input{
+	width: 350px;
+    height: 50px;
+    display: block;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid #f4f4f4;
+    margin: 10px;
+    font-size:18px;
+    font-style:"Open Sans";
+    color: #f4f4f4;
+}
+
+
+.form-Connexion input:focus{
+    outline: none;
 }
 
 /*--International--*/
